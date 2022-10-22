@@ -20,10 +20,10 @@ npm run start
 
 ```
 
-Una vez que corrar en automatico abrira el navegador y ya que el proyecto esta configurado para que puedas abrirlo desde otro dispositivo te llevara a http://0.0.0.0:9999, por lo cual tienes que dirigirte a la siguiente dirección para ver el proyecto, si quieres verlo en otro dispositivo obten tu ip y escribela en tu dispositivo tipo http://tu.ip:9999
+Una vez que corrar en automatico abrira el navegador y ya que el proyecto esta configurado para que puedas abrirlo desde otro dispositivo te llevara a http://0.0.0.0:9998, por lo cual tienes que dirigirte a la siguiente dirección para ver el proyecto, si quieres verlo en otro dispositivo obten tu ip y escribela en tu dispositivo tipo http://tu.ip:9998
 
 ```
 
-http://localhost:9999
+http://localhost:9998
 
 ```
