@@ -30,11 +30,6 @@ export function* getUserInfoRequest({ payload }) {
 }
 
 export function* getUserReposRequest({ payload }) {
-	console.log(
-		"🚀 ~ file: SUserInfo.jsx ~ line 33 ~ function*getUserReposRequest ~ payload",
-		payload
-	);
-
 	try {
 		const infoData = yield call(getService, payload);
 

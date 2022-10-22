@@ -10,5 +10,6 @@ module.exports = {
 		port: 9998,
 		open: true,
 		hot: true,
+		historyApiFallback: true,
 	},
 };

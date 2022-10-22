@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CSearchBar from "../../01_Components/CSearchBar";
+import CSpacer from "../../01_Components/CSpacer";
 import CUserInfo from "../../01_Components/CUserInfo";
 import CUserSocial from "../../01_Components/CUserSocial";
 import { CCardRepoStyled } from "../../06_Utils/styledComponents";
@@ -21,7 +22,11 @@ const PSearchUserPage = ({ searchFunction, userInfo, userRepos }) => {
 	return (
 		<>
 			<div className="row">
-				<CSearchBar searchFunction={searchFunction} />
+				<CSearchBar
+					placeholder={"Buscar usuario"}
+					searchFunction={searchFunction}
+				/>
+				<CSpacer size={16} />
 			</div>
 			{userInfo && (
 				<div className="row my-4">

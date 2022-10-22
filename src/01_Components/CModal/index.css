@@ -9,3 +9,15 @@
 	bottom: 0;
 	z-index: 9999;
 }
+
+.modal-content {
+	border-radius: 1em;
+}
+
+.modal-title {
+	color: black;
+}
+
+.modal-body {
+	color: black;
+}

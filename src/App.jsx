@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Link, Route, Routes } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import CONFIG from "./04_Constans/constans";
@@ -7,7 +7,12 @@ import CONFIG from "./04_Constans/constans";
 import { CLoader } from "./01_Components/CLoader/index";
 import { CModal } from "./01_Components/CModal";
 import PSearchUserPage from "./02_Pages/PSearchUserPage/index";
+
 import CSearchUserPage from "./03_Controllers/CSearchUserPage";
+import CSearchRepoPage from "./03_Controllers/CSearchRepoPage";
+import PSearchRepo from "./02_Pages/PSearchRepo";
+import { CNavMenu } from "./06_Utils/styledComponents";
+import CSpacer from "./01_Components/CSpacer";
 
 console.log("env", process.env);
 console.log("config", CONFIG);
@@ -15,13 +20,12 @@ console.log("config", CONFIG);
 export const App = () => {
 	const loading = useSelector((state) => state.loader);
 	const modal = useSelector((state) => state.modal);
-	useEffect(() => {
-		/* dispatch(showLoader("Nice")); */
-	}, []);
 
 	return (
 		<>
 			<div className="container">
+				<CNavMenu />
+				<CSpacer size={16} />
 				<Routes>
 					<Route
 						path="/"
@@ -32,11 +36,10 @@ export const App = () => {
 						}
 					/>
 					<Route
-						path="/about"
+						exact
+						path="/repositories"
 						element={
-							<CSearchUserPage
-								RenderComponent={PSearchUserPage}
-							/>
+							<CSearchRepoPage RenderComponent={PSearchRepo} />
 						}
 					/>
 				</Routes>

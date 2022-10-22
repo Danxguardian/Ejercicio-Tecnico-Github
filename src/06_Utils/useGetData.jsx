@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 
 export const useGetData = (url) => {
 	const [data, setData] = useState(null);
-	console.log(url);
 
 	useEffect(() => {
 		try {

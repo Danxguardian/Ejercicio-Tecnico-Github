@@ -1,10 +1,12 @@
 import styled from "styled-components";
 import CCardRepo from "../01_Components/CCardRepo";
+import CNav from "../01_Components/CNav";
 import CTextIcon from "../01_Components/CTextIcon";
 import { bgColors } from "../04_Constans/bgColors";
 
 export const Input = styled.input`
-	border: 0.2em black solid;
+	border: 0.15em black solid;
+	height: 48px;
 	font-weight: bold;
 `;
 
@@ -50,4 +52,27 @@ export const IconImg = styled.img`
 	height: 24px;
 	margin-left: 8px;
 	margin-right: 8px;
+`;
+
+export const CNavMenu = styled(CNav)`
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #33333384;
+		display: flex;
+		justify-content: center;
+	}
+
+	li a {
+		display: block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+	li a:hover {
+		background-color: #111;
+	}
 `;
