@@ -26,6 +26,17 @@ export const CCardRepoStyled = styled(CCardRepo)`
 	background: ${(props) => bgColors[props.language] || "#b5b5b56c"};
 	padding: 1em 1em;
 	border-radius: 16px;
+	> p {
+		min-height: 48px;
+		max-height: 48px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+	}
+	> h3 {
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
 `;
 
 export const CircleImg = styled.img`

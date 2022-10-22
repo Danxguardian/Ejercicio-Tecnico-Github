@@ -3,21 +3,27 @@ import { PText } from "../../06_Utils/styledComponents";
 import CSpacer from "../CSpacer";
 import CContactArea from "./CContactArea";
 import CFollowArea from "./CFollowArea";
-const CUserSocial = ({ bio }) => {
+const CUserSocial = ({
+	bio,
+	followers,
+	following,
+	location,
+	email,
+	blog,
+	twitter,
+}) => {
 	return (
 		<>
-			<PText>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-				quis dignissim neque. Vestibulum metus enim, maximus eget
-				sagittis quis, feugiat vitae lectus. Duis tincidunt dapibus
-				enim, et tincidunt velit consequat in. In a blandit nisi, ac
-				maximus nulla. Proin vel facilisis nisl. Donec consectetur, erat
-				eget viverra consectetur
-			</PText>
+			<PText>{bio}</PText>
 			<CSpacer size={8} />
-			<CFollowArea />
+			<CFollowArea followers={followers} following={following} />
 			<CSpacer size={8} />
-			<CContactArea />
+			<CContactArea
+				location={location}
+				email={email}
+				blog={blog}
+				twitter={twitter}
+			/>
 		</>
 	);
 };

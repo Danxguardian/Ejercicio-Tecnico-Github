@@ -1,6 +1,4 @@
 import axios from "axios";
-import "./interceptors";
-
 const getService = (server, root, path, config) => {
 	const srv = server || "";
 	const rootPath = root || "";
@@ -10,6 +8,7 @@ const getService = (server, root, path, config) => {
 			.get(`${srv}${rootPath}${endPoint}`, config || null)
 			.then((response) => {
 				const result = response;
+
 				if (result.statusCode) {
 					rejects(result);
 				} else {

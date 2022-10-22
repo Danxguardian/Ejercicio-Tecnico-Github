@@ -3,7 +3,7 @@ const CONFIG = {
 	development: {
 		REACT_APP_ENV: "LOCAL",
 		PORT: "4000",
-		API_SERVER: "http://localhost:4000",
+		API_SERVER: "https://api.github.com",
 		API_ROOT: "",
 	},
 };
@@ -20,7 +20,7 @@ const validateHost = () => {
 	switch (window.location.hostname) {
 		case "localhost":
 			return CONFIG["development"];
-		
+
 		default:
 			return CONFIG["development"];
 	}

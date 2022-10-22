@@ -16,17 +16,22 @@ const CCardRepo = ({
 	className,
 }) => {
 	return (
-		<div className={className}>
+		<div
+			className={className}
+			onClick={() => {
+				window.open(link, "mywindow");
+			}}
+		>
 			<H3Text>{name}</H3Text>
 			<PText>{description}</PText>
-			<div className="row ">
-				<div className="col-6">
-					<h6>{language}</h6>
+			<div className="row">
+				<div className="col-12 col-md-6 col-lg-6">
+					<h5>{language}</h5>
 				</div>
-				<div className="col-3 d-flex justify-content-end">
+				<div className="col-6 col-md-3 col-lg-3 d-flex justify-content-end">
 					<CTextIconStyled icon={icon_star} text={stargazers} />
 				</div>
-				<div className="col-3 d-flex justify-content-end">
+				<div className="col-6 col-md-3 col-lg-3 d-flex justify-content-end">
 					<CTextIconStyled icon={icon_fork} text={forks} />
 				</div>
 			</div>

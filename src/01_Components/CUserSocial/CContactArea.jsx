@@ -10,21 +10,29 @@ import icon_link from "../../assets/icons/icon_link.svg";
 import icon_location from "../../assets/icons/icon_location.svg";
 import icon_twitter from "../../assets/icons/icon_twitter.svg";
 
-const CContactArea = () => {
+const CContactArea = ({ location, email, blog, twitter }) => {
 	return (
 		<div className="row">
-			<div className="col-6">
-				<CTextIconStyled icon={icon_location} text={"ubicacion"} />
-			</div>
-			<div className="col-6">
-				<CTextIconStyled icon={icon_email} text={"email"} />
-			</div>
-			<div className="col-6">
-				<CTextIconStyled icon={icon_link} text={"page"} />
-			</div>
-			<div className="col-6">
-				<CTextIconStyled icon={icon_twitter} text={"twitter"} />
-			</div>
+			{location && (
+				<div className="col-12 col-md-6 col-lg-6">
+					<CTextIconStyled icon={icon_location} text={location} />
+				</div>
+			)}
+			{email && (
+				<div className="col-12 col-md-6 col-lg-6">
+					<CTextIconStyled icon={icon_email} text={email} />
+				</div>
+			)}
+			{blog && (
+				<div className="col-12 col-md-6 col-lg-6">
+					<CTextIconStyled icon={icon_link} text={blog} />
+				</div>
+			)}
+			{twitter && (
+				<div className="col-12 col-md-6 col-lg-6">
+					<CTextIconStyled icon={icon_twitter} text={twitter} />
+				</div>
+			)}
 		</div>
 	);
 };

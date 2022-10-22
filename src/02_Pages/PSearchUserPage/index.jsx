@@ -4,58 +4,61 @@ import CUserInfo from "../../01_Components/CUserInfo";
 import CUserSocial from "../../01_Components/CUserSocial";
 import { CCardRepoStyled } from "../../06_Utils/styledComponents";
 
-const PSearchUserPage = ({ searchFunction }) => {
-	const dummyArray = [
-		{
-			name: "Dummmy",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis dignissim neque. Vestibulum metus enim, maximus eget sagittis quis, feugiat vitae lectus. Duis tincidunt dapibus enim, et tincidunt velit consequat in. In a blandit nisi, ac maximus nulla. Proin vel facilisis nisl. Donec consectetur, erat eget viverra consectetur",
-			language: "JavaScript",
-			link: "http://localhost:4444",
-			stargazers: 43,
-			forks: 1,
-		},
-		{
-			name: "Dummmy",
-			description:
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis dignissim neque. Vestibulum metus enim, maximus eget sagittis quis, feugiat vitae lectus. Duis tincidunt dapibus enim, et tincidunt velit consequat in. In a blandit nisi, ac maximus nulla. Proin vel facilisis nisl. Donec consectetur, erat eget viverra consectetur",
-			language: "JavaScript",
-			link: "http://localhost:4444",
-			stargazers: 43,
-			forks: 1,
-		},
-	];
+const PSearchUserPage = ({ searchFunction, userInfo, userRepos }) => {
+	const {
+		name,
+		login: user,
+		avatar_url: profileImg,
+		bio,
+		followers,
+		following,
+		location,
+		email,
+		blog,
+		twitter_username: twitter,
+	} = userInfo || {};
 
 	return (
 		<>
 			<div className="row">
 				<CSearchBar searchFunction={searchFunction} />
 			</div>
-			<div className="row my-4">
-				<div className="col-12 col-lg-4">
-					<CUserInfo
-						profileImg={
-							"https://www.w3schools.com/howto/img_avatar2.png"
-						}
-						user={"Danxguardian"}
-						name={"Daniel Torrez"}
-					/>
+			{userInfo && (
+				<div className="row my-4">
+					<div className="col-12 col-lg-4">
+						<CUserInfo
+							profileImg={profileImg}
+							user={user}
+							name={name}
+						/>
+					</div>
+					<div className="col-12 col-lg-8">
+						<CUserSocial
+							bio={bio}
+							followers={followers}
+							following={following}
+							location={location}
+							email={email}
+							blog={blog}
+							twitter={twitter}
+						/>
+					</div>
 				</div>
-				<div className="col-12 col-lg-8">
-					<CUserSocial />
-				</div>
-			</div>
+			)}
 			<div className="row">
-				{dummyArray.map((item) => {
+				{userRepos.map((item, index) => {
 					return (
-						<div className="col-12 col-lg-4 mb-4">
+						<div
+							className="col-12 col-lg-4 mb-4"
+							key={item.id + index}
+						>
 							<CCardRepoStyled
 								name={item.name}
 								description={item.description}
 								language={item.language}
-								link={item.link}
-								stargazers={item.stargazers}
-								forks={item.forks}
+								link={item.html_url}
+								stargazers={item.stargazers_count}
+								forks={item.forks_count}
 							/>
 						</div>
 					);

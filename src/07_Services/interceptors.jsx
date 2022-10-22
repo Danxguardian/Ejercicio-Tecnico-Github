@@ -4,10 +4,11 @@ import axios from "axios";
 
 /* Request interceptor */
 /* If need a configurations for all petitions use this*/
+
 axios.interceptors.request.use((config) => {
-	config.headers["extraHeader"] = "extraHeader";
+	/* config.headers["extraHeader"] = "extraHeader";
 	config.headers["anotherExtraHeader"] = "anotherExtraHeader";
-	config.headers["Authorization"] = "Authorization";
+	config.headers["Authorization"] = "Authorization"; */
 
 	return config;
 });
