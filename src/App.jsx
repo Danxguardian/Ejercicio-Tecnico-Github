@@ -1,5 +1,11 @@
 import React from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import {
+	BrowserRouter,
+	HashRouter,
+	Link,
+	Route,
+	Routes,
+} from "react-router-dom";
 import { useSelector } from "react-redux";
 
 import CONFIG from "./04_Constans/constans";
@@ -24,9 +30,9 @@ export const App = () => {
 	return (
 		<>
 			<div className="container">
-				<CNavMenu />
-				<CSpacer size={16} />
-				<BrowserRouter>
+				<HashRouter>
+					<CNavMenu />
+					<CSpacer size={16} />
 					<Routes>
 						<Route
 							path="/"
@@ -46,7 +52,7 @@ export const App = () => {
 							}
 						/>
 					</Routes>
-				</BrowserRouter>
+				</HashRouter>
 			</div>
 
 			{modal.status && (

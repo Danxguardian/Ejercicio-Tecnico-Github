@@ -1,10 +1,24 @@
-# Base React + Bootstrap
+# Ejercico Tecnico - Github
 
-Proyecto base para comenzar a programar React + Bootstrap + Redux, sin tener que pasar por las configuraciones desde cero, este proyecto es una de las base que ocupo y no tiene porque ser tu definitiva
+Este proyecto surge de una prueba tecnica, para la creacion de una aplicación web que consuma los servicios de **Github API** para realizar la busqueda de usuarios y busqueda de repositorios con su respectiva navegacion por medio de las rutas. Dichas pantallas deberan tener su barra de busqueda y los resultados apareceran en la misma pantalla.
 
-## Comenzando 🚀
+## Tecnologias :computer:
 
-Una vez que tengas el proyecto, utiliza el comando para instalar los modulos necesarios, se llevara un rato pero asi no tienes que hacer mas
+Para este proyecto se ocupo el siguiente stack de tecnologias
+
+```
+- ReactJS
+- React Hooks, React Router Dom, React Custom Hooks
+- Redux
+- Sagas
+- Axios
+- Bootstrap
+- Styled Components
+```
+
+## Despliegue local 🚀
+
+Una vez que tengas el proyecto, utiliza el comando para instalar los modulos necesarios.
 
 ```
 
@@ -12,7 +26,7 @@ npm install
 
 ```
 
-Cuando termine puedes empezar con la magia, pero primero corre el proyect con
+Cuando termine puedes empezar con la magia, pero primero corre el proyecto con.
 
 ```
 
@@ -20,10 +34,18 @@ npm run start
 
 ```
 
-Una vez que corrar en automatico abrira el navegador y ya que el proyecto esta configurado para que puedas abrirlo desde otro dispositivo te llevara a http://0.0.0.0:9998, por lo cual tienes que dirigirte a la siguiente dirección para ver el proyecto, si quieres verlo en otro dispositivo obten tu ip y escribela en tu dispositivo tipo http://tu.ip:9998
+Una vez que termine el comando en automatico abrira el navegador y podras a empezar a navegar en el proyecto
 
 ```
 
 http://localhost:9998
 
+```
+
+## Demo en linea
+
+Puedes encontrar el demo en linea en el siguiente link
+
+```
+https://profesional.danieltorrez.com/ejGitHub/
 ```

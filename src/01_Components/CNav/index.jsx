@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import CSpacer from "../CSpacer";
 
 const CNav = ({ className }) => {
@@ -6,11 +7,11 @@ const CNav = ({ className }) => {
 		<div className={`row ${className}`}>
 			<ul>
 				<li>
-					<a href="/">Usuarios</a>
+					<Link to="/">Usuarios</Link>
 				</li>
 				<CSpacer size={4} horizontal />
 				<li>
-					<a href="/repositories">Repositorios</a>
+					<Link to="/repositories">Repositorios</Link>
 				</li>
 			</ul>
 		</div>
