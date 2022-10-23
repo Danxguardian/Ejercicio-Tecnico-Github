@@ -44,7 +44,5 @@ http://localhost:9998
 
 ## Demo en linea
 
-Puedes encontrar el demo en linea en el siguiente link
-
-[Ejercicio tecnico - Demo](https://profesional.danieltorrez.com/ejGitHub/)
+Puedes encontrar el demo en linea en el siguiente link [Ejercicio tecnico - Demo](https://profesional.danieltorrez.com/ejGitHub/)
 
