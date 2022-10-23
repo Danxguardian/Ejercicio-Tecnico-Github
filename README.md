@@ -1,4 +1,4 @@
-# Ejercico Tecnico - Github
+# Ejercicio Tecnico - Github
 
 Este proyecto surge de una prueba tecnica, para la creacion de una aplicación web que consuma los servicios de **Github API** para realizar la busqueda de usuarios y busqueda de repositorios con su respectiva navegacion por medio de las rutas. Dichas pantallas deberan tener su barra de busqueda y los resultados apareceran en la misma pantalla.
 
@@ -47,5 +47,5 @@ http://localhost:9998
 Puedes encontrar el demo en linea en el siguiente link
 
 ```
-https://profesional.danieltorrez.com/ejGitHub/
+[Ejercicio tecnico - Demo](https://profesional.danieltorrez.com/ejGitHub/)
 ```
