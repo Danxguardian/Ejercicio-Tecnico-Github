@@ -25,7 +25,7 @@ export function* getSearchReposRequest({ payload }) {
 		yield put(getSearchReposSuccess(infoData.data));
 	} catch (error) {
 		/* IF ONE SHOW A ERROR THIS IS THE PLACES */
-		if (error.request.status)
+		if (error.request.status == 422) {
 			yield put(
 				showModal(
 					1,
@@ -33,6 +33,7 @@ export function* getSearchReposRequest({ payload }) {
 					"Los parametros de busqueda no traen algun resultado intente con otro"
 				)
 			);
+		}
 		yield put(getSearchReposError(error));
 	}
 }

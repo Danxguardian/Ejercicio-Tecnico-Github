@@ -10,6 +10,7 @@ import {
 
 import CONFIG from "../../04_Constans/constans";
 import ENDPOINTS from "../../04_Constans/endpoints";
+import { showModal } from "../Actions/AModal";
 
 export function* getUserInfoRequest({ payload }) {
 	const { user } = payload;
@@ -24,6 +25,15 @@ export function* getUserInfoRequest({ payload }) {
 
 		yield put(getUserInfoSuccess(infoData.data));
 	} catch (error) {
+		if (error.request.status == 404) {
+			yield put(
+				showModal(
+					1,
+					"Problema con la petición",
+					"Los parametros de busqueda no traen algun resultado intente con otro"
+				)
+			);
+		}
 		/* IF ONE SHOW A ERROR THIS IS THE PLACES */
 		yield put(getUserInfoError(error));
 	}

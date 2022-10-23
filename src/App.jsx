@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Link, Route, Routes } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import React from "react";
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import { useSelector } from "react-redux";
 
 import CONFIG from "./04_Constans/constans";
 
@@ -26,23 +26,27 @@ export const App = () => {
 			<div className="container">
 				<CNavMenu />
 				<CSpacer size={16} />
-				<Routes>
-					<Route
-						path="/"
-						element={
-							<CSearchUserPage
-								RenderComponent={PSearchUserPage}
-							/>
-						}
-					/>
-					<Route
-						exact
-						path="/repositories"
-						element={
-							<CSearchRepoPage RenderComponent={PSearchRepo} />
-						}
-					/>
-				</Routes>
+				<BrowserRouter>
+					<Routes>
+						<Route
+							path="/"
+							element={
+								<CSearchUserPage
+									RenderComponent={PSearchUserPage}
+								/>
+							}
+						/>
+						<Route
+							exact
+							path="/repositories"
+							element={
+								<CSearchRepoPage
+									RenderComponent={PSearchRepo}
+								/>
+							}
+						/>
+					</Routes>
+				</BrowserRouter>
 			</div>
 
 			{modal.status && (

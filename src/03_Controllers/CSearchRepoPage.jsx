@@ -12,7 +12,7 @@ const CSearchRepoPage = ({ RenderComponent }) => {
 
 	const propsToComponent = {
 		searchFunction,
-		reposInfo: state.repoInfo || {},
+		reposInfo: state.repoInfo || null,
 	};
 
 	return <RenderComponent {...propsToComponent} />;

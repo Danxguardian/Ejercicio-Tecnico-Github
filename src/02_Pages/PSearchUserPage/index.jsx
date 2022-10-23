@@ -3,7 +3,7 @@ import CSearchBar from "../../01_Components/CSearchBar";
 import CSpacer from "../../01_Components/CSpacer";
 import CUserInfo from "../../01_Components/CUserInfo";
 import CUserSocial from "../../01_Components/CUserSocial";
-import { CCardRepoStyled } from "../../06_Utils/styledComponents";
+import { CCardRepoStyled, H3Text } from "../../06_Utils/styledComponents";
 
 const PSearchUserPage = ({ searchFunction, userInfo, userRepos }) => {
 	const {
@@ -50,6 +50,7 @@ const PSearchUserPage = ({ searchFunction, userInfo, userRepos }) => {
 					</div>
 				</div>
 			)}
+			{!userInfo && <H3Text>Ingrese un valor a buscar</H3Text>}
 			<div className="row">
 				{userRepos.map((item, index) => {
 					return (
