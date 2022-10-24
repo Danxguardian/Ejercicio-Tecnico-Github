@@ -19,7 +19,7 @@ Para este proyecto se ocupo el siguiente stack de tecnologias
 
 Antes de programar y ya que no habia un diseño predefinido me di a la tarea de hacer la pantalla de usuarios y como se iba a colocar cada uno de los componentes dentro de esta, quedando de la siguiente forma
 
-![pantalla usuarios]([/pantalla_usuarios.jpg](https://profesional.danieltorrez.com/ejGitHub/pantalla_usuarios.jpg))
+<img src="https://profesional.danieltorrez.com/ejGitHub/pantalla_usuarios.jpg" alt="pantalla usuarios"/>
 
 ## Despliegue local 🚀
 
