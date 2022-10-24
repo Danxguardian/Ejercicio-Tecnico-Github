@@ -15,6 +15,11 @@ Para este proyecto se ocupo el siguiente stack de tecnologias
 - Bootstrap
 - Styled Components
 ```
+## Diseños :pencil2:
+
+Antes de programar y ya que no habia un diseño predefinido me di a la tarea de hacer la pantalla de usuarios y como se iba a colocar cada uno de los componentes dentro de esta, quedando de la siguiente forma
+
+![pantalla usuarios](/pantalla_usuarios.jpg)
 
 ## Despliegue local 🚀
 
